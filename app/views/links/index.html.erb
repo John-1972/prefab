@@ -1,4 +1,11 @@
-<h2><%= @headings.first.heading_text %></h2>
-<h4><%= @headings.first.short_description %></h4>
-
-<h3><%= @links.first.link_description %></h3>
+<% @headings.each do |heading| %> <!-- Show section heading text for a particular id num -->
+  <h3><%= @headings.find(heading).heading_text %></h3> <!-- Show section heading text for a particular id num -->
+  <h4><%= @headings.find(heading).short_description %></h4>
+  <ul>
+    <div class="bullet-point col-md"> <!-- Show links as bullet points -->
+      <% @links.where(heading_id: heading).each do |link| %> <!-- All links for this heading_id -->
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.link_URL %>'><%= link.link_description %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+<% end %>
