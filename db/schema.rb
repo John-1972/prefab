@@ -10,24 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190121120928) do
+ActiveRecord::Schema.define(version: 20190122190810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "headings", force: :cascade do |t|
     t.string   "heading_text"
-    t.string   "short_description"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.string   "subtitle"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "links", force: :cascade do |t|
-    t.string   "link_description"
-    t.string   "link_URL"
+    t.string   "description"
+    t.string   "URL"
     t.integer  "heading_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
