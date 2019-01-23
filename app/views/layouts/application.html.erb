@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Prefab</title>
+    <title>Prefabricated Home Manufacturers</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Prefabricated Home Manufacturers</a>
+      <form class="form-inline">
+        <button class="btn align-right btn-outline-primary" type="button" href="#">Add Link</button>
+        <button class="btn align-right btn-outline-success" type="button" href="#">Login</button>
+      </form>
+    </nav>
+
+    <br class="clear" />
+
     <%= yield %>
   </body>
 </html>

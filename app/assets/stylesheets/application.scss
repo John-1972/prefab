@@ -14,3 +14,15 @@
  *= require_self
  */
 @import "bootstrap";
+
+body {
+  background: image_url('retina_wood.png');
+}
+
+.navbar {
+  background: image_url('random_grey_variations.png');
+}
+
+button {
+  margin-left: 5px;
+}
