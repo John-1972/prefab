@@ -1,11 +1,13 @@
 <% @headings.each do |heading| %> <!-- Iterate through all headings -->
-  <h3><%= @headings.find(heading.id).heading_text %></h3> <!-- Show section heading text for current id num -->
-  <h6><%= @headings.find(heading.id).subtitle %></h6> <!-- Show heading subtitle for this id num -->
-  <ul> <!-- Show links as bullet points -->
-    <div class="bullet-point col-md"> <!-- Bullet point CSS style -->
-      <% @links.where(heading_id: heading).each do |link| %> <!-- Iterate though all links for this heading_id -->
-        <li><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.description %></a></li>
-      <% end %>
-    </div>
-  </ul>
+  <div class="col-8 offset-2"> <!-- Large central column for text -->
+    <h3><%= @headings.find(heading.id).heading_text %></h3> <!-- Show section heading text for current id num -->
+    <h6><%= @headings.find(heading.id).subtitle %></h6> <!-- Show heading subtitle for this id num -->
+    <ul> <!-- Show links as bullet points -->
+      <div class="bullet-point col-md"> <!-- Bullet point CSS style -->
+        <% @links.where(heading_id: heading).each do |link| %> <!-- Iterate though all links for this heading_id -->
+          <li><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.description %></a></li>
+        <% end %>
+      </div>
+    </ul>
+  </div>
 <% end %>
