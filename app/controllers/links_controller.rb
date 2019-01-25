@@ -3,4 +3,7 @@ class LinksController < ApplicationController
     @headings = Heading.all
     @links = Link.all
   end
+
+  def new # Action for creating new link
+  end
 end
