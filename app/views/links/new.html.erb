@@ -1,7 +1,7 @@
 <div class="col-8 offset-2">
   <h3>Enter your link details</h3>
   <%= simple_form_for @link do |f| %>
-    <%= f.input :heading_id %> <!-- This is going to have to be made into a drop-down menu -->
+    <%= f.association :heading, label: 'Link to go under which heading?', as: :radio_buttons, label_method: :heading_text %>
     <%= f.input :description %>
     <%= f.input :URL %>
     <br />
