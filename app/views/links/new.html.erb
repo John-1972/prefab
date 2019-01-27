@@ -1,3 +1,10 @@
 <div class="col-8 offset-2">
   <h3>Enter your link details</h3>
+  <%= simple_form_for @link do |f| %>
+    <%= f.input :heading_id %> <!-- This is going to have to be made into a drop-down menu -->
+    <%= f.input :description %>
+    <%= f.input :URL %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
 </div>

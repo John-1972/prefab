@@ -5,5 +5,6 @@ class LinksController < ApplicationController
   end
 
   def new # Action for creating new link
+    @link = Link.new
   end
 end
