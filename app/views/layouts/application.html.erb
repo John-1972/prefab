@@ -10,9 +10,9 @@
 
   <body>
     <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Prefabricated Home Manufacturers</a>
+      <%= link_to 'Prefabricated Home Manufacturers', root_path, class: 'navbar-brand' %>
       <form class="form-inline">
-        <button class="btn align-right btn-outline-primary" type="button" href="#">Add Link</button>
+        <%= link_to 'Add Link', new_link_path, class: 'btn align-right btn-outline-primary' %>
         <button class="btn align-right btn-outline-success" type="button" href="#">Login</button>
       </form>
     </nav>

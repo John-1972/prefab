@@ -1,9 +1,9 @@
 <div class="col-8 offset-2">
   <h3>Enter your link details</h3>
   <%= simple_form_for @link do |f| %>
-    <%= f.association :heading, label: 'Link to go under which heading?', as: :radio_buttons, label_method: :heading_text %>
-    <%= f.input :description %>
-    <%= f.input :URL %>
+    <%= f.association :heading, label: 'Link goes under which heading?', as: :radio_buttons, label_method: :heading_text %>
+    <%= f.input :description, label: 'Link description:' %>
+    <%= f.input :URL , label: 'URL:' %>
     <br />
     <%= f.submit 'Create', class: 'btn btn-primary' %>
   <% end %>
