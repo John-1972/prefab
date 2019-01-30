@@ -1,3 +1,9 @@
+<div class="photo">
+  <%= image_tag "prefab_passive_house.jpg", :alt => "Prefabricated Passive House", :width => "100%" %>
+</div>
+
+<br class="clear" />
+
 <% @headings.each do |heading| %> <!-- Iterate through all headings -->
   <div class="col-8 offset-2"> <!-- Large central column for text -->
     <h3><%= @headings.find(heading.id).heading_text %></h3> <!-- Show section heading text for current id num -->
