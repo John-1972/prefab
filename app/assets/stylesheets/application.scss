@@ -14,7 +14,6 @@
  *= require_self
  */
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 body {
   background: image_url('retina_wood.png');
@@ -27,13 +26,12 @@ body {
 
 .navbar-brand {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  /* font-family: 'Titillium Web', sans-serif; */
   font-size: xx-large;
   font-weight: 300;
   padding-left: 12px;
 }
 
-button {
+.btn {
   margin-left: 5px;
 }
 

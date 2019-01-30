@@ -11,9 +11,15 @@
   <body>
     <nav class="navbar navbar-toggleable-md navbar-dark bg-dark">
       <%= link_to 'Prefabricated Home Manufacturers in the UK', root_path, class: 'navbar-brand' %>
+
       <form class="form-inline">
         <%= link_to 'Add Link', new_link_path, class: 'btn align-right btn-outline-primary' %>
-        <button class="btn align-right btn-outline-success" type="button" href="#">Login</button>
+        <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn align-right btn-outline-danger' %>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn align-right btn-outline-success' %>
+          <%= link_to 'Sign In', new_user_session_path, class: 'btn align-right btn-outline-success' %>
+        <% end %>
       </form>
     </nav>
 
