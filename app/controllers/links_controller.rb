@@ -11,8 +11,12 @@ class LinksController < ApplicationController
   end
 
   def create # Action connected to 'Create' button on new link page
-    Link.create(link_params) # Sends the data from 'link_params' to the database
-    redirect_to root_path # After new link is stored, redirect user to index page
+    @link = Link.create(link_params) # Sends the data from 'link_params' to the DB & copies it to a var
+    if @link.valid? # If the item was properly created...
+      redirect_to root_path # ...redirect user to index page
+    else # If it wasn't (failed validation test)...
+      render :new, status: :unprocessable_entity # ...send user back to the form with an error msg
+    end
   end
 
   private
