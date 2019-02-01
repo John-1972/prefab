@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :authenticate_user!, only [:new, :create] # 'Before filter' limits actions to signed-in users
+  before_action :authenticate_user!, only: [:new, :create] # 'Before filter' limits actions to signed-in users
 
   def index
     @headings = Heading.all
