@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+# Don't put a ruby version here until at least 2.4.6 is running on my VM
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -60,4 +61,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
-gem 'devise'
+gem 'devise', '>= 4.6.0'
