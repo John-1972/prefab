@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 # Don't put a ruby version here until at least 2.4.6 is running on my VM
+# Heroku says add "ruby '2.4.5'" to this gemfile.
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -54,7 +55,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'popper_js'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.3.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
