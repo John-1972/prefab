@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-# Don't put a ruby version here until at least 2.4.6 is running on my VM
-# Heroku says add "ruby '2.4.5'" to this gemfile.
+ruby '2.4.5'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
