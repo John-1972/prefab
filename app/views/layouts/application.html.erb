@@ -4,7 +4,7 @@
     <title>Prefabricated Home Manufacturers in the UK</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -19,8 +19,7 @@
         <% else %>
           <%= link_to 'Sign In', new_user_session_path, class: 'btn align-right btn-outline-success' %>
         <% end %>
-      </form>
-      
+      </form>    
     </nav>
 
     <% if notice.present? %>
@@ -31,5 +30,11 @@
     <% end %>
 
     <%= yield %>
+
+    <footer class="footer text-center py-2"> <!-- 'py' specifies the footer height -->
+      <div class="container">
+        Page designed by John R Henderson in Sussex, England. Copyright notice goes here, and maybe some links.
+      </div>
+    </footer>
   </body>
 </html>
