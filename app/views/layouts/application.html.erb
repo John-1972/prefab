@@ -9,32 +9,39 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-md navbar-dark bg-dark"> <!-- toggleable=>expand? -->
-      <%= link_to 'Prefabricated Home Manufacturers in the UK', root_path, class: 'navbar-brand' %>
+    <div class="d-flex flex-column sticky-footer-wrapper">
+      <nav class="navbar navbar-toggleable-md navbar-dark bg-dark"> <!-- toggleable=>expand? -->
+        <!-- Get rid of the ^toggleable part; there are no links to turn into a menu -->
+        <%= link_to 'Prefabricated Home Manufacturers in the UK', root_path, class: 'navbar-brand' %>
+        <!-- I need to fix ^this title; it isn't changing when the window width shrinks -->
+        <form class="form-inline">
+          <% if user_signed_in? %>
+            <%= link_to 'Add Link', new_link_path, class: 'btn align-right btn-outline-primary' %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn align-right btn-outline-danger' %>
+          <% else %>
+            <%= link_to 'Sign In', new_user_session_path, class: 'btn align-right btn-outline-success' %>
+          <% end %>
+        </form>    
+      </nav>
 
-      <form class="form-inline">
-        <% if user_signed_in? %>
-          <%= link_to 'Add Link', new_link_path, class: 'btn align-right btn-outline-primary' %>
-          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn align-right btn-outline-danger' %>
-        <% else %>
-          <%= link_to 'Sign In', new_user_session_path, class: 'btn align-right btn-outline-success' %>
+      <main class="flex-fill"> <!-- Need this to make the footer sticky -->
+        <% if notice.present? %>
+          <p class="alert alert-info"><%= notice %></p>
         <% end %>
-      </form>    
-    </nav>
+        <% if alert.present? %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
 
-    <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-    <% if alert.present? %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+        <%= yield %>
+      </main>
 
-    <%= yield %>
-
-    <footer class="footer text-center py-2"> <!-- 'py' specifies the footer height -->
-      <div class="container">
-        Page designed by John R Henderson in Sussex, England. Copyright notice goes here, and maybe some links.
-      </div>
-    </footer>
+      <footer class="py-2"> <!-- 'py' specifies the footer height -->
+        <div class="container">
+          <div class="col-12 text-center">
+            Page designed by John R Henderson in Sussex, England. Copyright notice goes here, and maybe some links.
+          </div>
+        </div> <!-- class="container" -->
+      </footer>
+    </div> <!-- id="sticky-footer-wrapper" -->
   </body>
 </html>
