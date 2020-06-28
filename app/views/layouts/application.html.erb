@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <div class="d-flex flex-column sticky-footer-wrapper">
-      <nav class="navbar navbar-toggleable-md navbar-dark bg-dark"> <!-- toggleable=>expand? -->
-        <!-- Get rid of the ^toggleable part; there are no links to turn into a menu -->
+    <!-- I need to revisit this project as a mobile-first design -->
+    <div class="d-flex flex-column sticky-footer-wrapper"> <!--Wraps everything, allows sticky footer-->
+      <nav class="navbar navbar-dark bg-dark"> <!-- Dark background => Light text -->
         <%= link_to 'Prefabricated Home Manufacturers in the UK', root_path, class: 'navbar-brand' %>
         <!-- I need to fix ^this title; it isn't changing when the window width shrinks -->
         <form class="form-inline">
@@ -42,6 +42,6 @@
           </div>
         </div> <!-- class="container" -->
       </footer>
-    </div> <!-- id="sticky-footer-wrapper" -->
+    </div> <!-- class="sticky-footer-wrapper" -->
   </body>
 </html>
