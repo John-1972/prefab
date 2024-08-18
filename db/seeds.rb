@@ -19,7 +19,6 @@ Link.create(description: 'How Much Does it Really Cost to Build a Flatpack Home?
 
 Link.create(description: 'Potton', URL: 'https://www.potton.co.uk/', heading_id: 2)
 Link.create(description: 'Scandia-Hus', URL: 'https://www.scandia-hus.co.uk/', heading_id: 2)
-Link.create(description: 'The Timber Frame Company', URL: 'http://www.ttfcuk.co.uk/', heading_id: 2)
 Link.create(description: 'Scotframe', URL: 'http://www.scotframe.co.uk/', heading_id: 2)
 
 Link.create(description: 'Hebridean Homes', URL: 'https://www.hebrideanhomes.com/', heading_id: 3)
@@ -30,6 +29,4 @@ Link.create(description: 'Dan-Wood Houses', URL: 'https://www.dan-wood.co.uk/', 
 
 Link.create(description: 'British Log Cabins', URL: 'http://britishlogcabins.com/', heading_id: 4)
 Link.create(description: 'Mountain Lodge Homes', URL: 'https://mountainlodgehomes.co.uk/properties/', heading_id: 4)
-Link.create(description: 'Finnish Log Homes', URL: 'http://www.finnishloghomes.co.uk/', heading_id: 4)
 Link.create(description: 'Keops Interlock', URL: 'https://logcabins.co.uk/', heading_id: 4)
-Link.create(description: 'House-UK', URL: 'http://www.house-uk.co.uk/', heading_id: 4)
